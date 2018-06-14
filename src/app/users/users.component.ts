@@ -27,7 +27,7 @@ import {
               transform: "translateY(-5px)"
             }),
             stagger(
-              "500ms",
+              "50ms",
               animate(
                 "550ms ease-out",
                 style({
