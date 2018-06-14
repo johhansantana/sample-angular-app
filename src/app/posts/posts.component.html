@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+
+<ul>
+  <li *ngFor="let post of posts$">
+    <a routerLink="detail/{{post.id}}">
+      {{post.title}}
+    </a>
+  </li>
+</ul>
