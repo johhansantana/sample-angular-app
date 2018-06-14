@@ -1,3 +1,4 @@
+import { User } from "./../../typings/user";
 import { Component, OnInit } from "@angular/core";
 import { DataService } from "../data.service";
 import { Observable } from "rxjs";
@@ -8,7 +9,7 @@ import { Observable } from "rxjs";
   styleUrls: ["./users.component.scss"]
 })
 export class UsersComponent implements OnInit {
-  users$: Object;
+  users$: User[];
   constructor(private data: DataService) {}
 
   ngOnInit() {

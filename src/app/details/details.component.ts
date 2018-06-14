@@ -3,6 +3,8 @@ import { DataService } from "../data.service";
 import { Observable } from "rxjs";
 import { ActivatedRoute } from "@angular/router";
 
+import { User } from "../../typings/user";
+
 @Component({
   selector: "app-details",
   templateUrl: "./details.component.html",
@@ -10,7 +12,7 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class DetailsComponent implements OnInit {
   userId$: number;
-  user$: Object = {};
+  user$: User;
   constructor(private data: DataService, private route: ActivatedRoute) {
     this.route.params.subscribe(params => (this.userId$ = params.id));
   }
